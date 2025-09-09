@@ -13,7 +13,7 @@ import warnings
 warnings.simplefilter('ignore')
 
 df = pd.read_csv('data/CCTV_in_Seoul.csv')
-gpt = ChatOpenAI( model='gpt-3.5-turbo', temperature=0)
+gpt = ChatOpenAI( model='gpt-4o-mini', temperature=0)
 agent = create_pandas_dataframe_agent( gpt, df, allow_dangerous_code=True,
                                        verbose=True,handle_parsing_error=True)
 
